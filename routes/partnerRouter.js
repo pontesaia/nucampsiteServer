@@ -5,12 +5,6 @@ const partnerRouter = express.Router();
 partnerRouter.use(bodyParser.json());
 partnerRouter
   .route("/")
-
-  .all((req, res, next) => {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/plain");
-    next();
-  })
   .get((req, res) => {
     res.end("Will send all the partners to you");
   })
