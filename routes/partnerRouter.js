@@ -28,11 +28,6 @@ partnerRouter
 
 partnerRouter
   .route("/:partnerId")
-  // .all((req, res, next) => {
-  //   res.statusCode = 200;
-  //   res.setHeader("Content-Type", "text/plain");
-  //   next();
-  // })
   .get((req, res) => {
     res.end(`Will send details of the partner: ${req.params.partnerId} to you`);
   })
